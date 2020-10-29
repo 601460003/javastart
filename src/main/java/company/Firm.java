@@ -1,6 +1,8 @@
 package company;
 
 public class Firm {
+    String test  ="ceshi";
+    final int value = 10;
     /**
      * 企业
      * 用java代码描述了企业
