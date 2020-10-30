@@ -27,8 +27,8 @@ public class Student {
         this.name = name;
         this.age = age;
     }
-    public Student(int age) {
-        System.out.println(this.toString());
+    public Student(String age) {
+        this.age = age;
     }
 
     public void setName(String name) {
