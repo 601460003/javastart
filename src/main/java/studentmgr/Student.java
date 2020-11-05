@@ -13,11 +13,24 @@ public class Student {
     //居住地
     private String address;
 
+    private int a;
+    private String b;
+    private String c;
+    private String d;
+    static String city = "中国";
+
+
+
     public Student() {
 
     }
 
+    public static void run() {
+        System.out.println(city);
+    }
+
     public Student(String id, String name, String age, String address) {
+
         this.id = id;
         this.name = name;
         this.age = age;
@@ -27,7 +40,15 @@ public class Student {
         this.name = name;
         this.age = age;
     }
+    public Student(int a, String b,String c,String d) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+    }
     public Student(String age) {
+        System.out.println(city);
+        System.out.println(a);
         this.age = age;
     }
 
