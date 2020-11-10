@@ -41,12 +41,16 @@ public class Shop {
 
     //根据金额简单刷选商品
     public  List<Good> chooseGoods(double money){
+        System.out.println(money);
         double totalMoey = 0; //类似JS定义初始值
         List<Good> newGoods = new ArrayList<>();//购物车
         for (Good good:goods){
             if(good.getPrice()<=money){
+                if ((totalMoey+good.getPrice()) > money) {
+                    continue;
+                }
                 //当购物车的总价格大于输入的金额时，跳过循环
-                continue;
+                newGoods.add(good);
             }
             newGoods.add(good);
             totalMoey+=good.getPrice();

@@ -47,8 +47,6 @@ public class Student {
         this.d = d;
     }
     public Student(String age) {
-        System.out.println(city);
-        System.out.println(a);
         this.age = age;
     }
 
