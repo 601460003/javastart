@@ -1,0 +1,4 @@
+*******通过暴露接口访问Java数据库*****
+1.在pom.xml文件中增加web依赖
+2.在controller包中创建一个类 将此类声明为web接口  -->@Autowired自动 service类
+3.创建service包，所有逻辑全部写这里

@@ -23,8 +23,8 @@ class DemoApplicationTests {
 	public void addPerson(){
 		Person person = new Person();
 		person.setAge(20);
-		person.setName("小金");
-		person.setNationality("非洲");
+		person.setName("小金99");
+		person.setNationality("美国");
 		personDao.addPerson(person);
 		System.out.println(personDao.getList());
 	}
@@ -39,7 +39,7 @@ class DemoApplicationTests {
 	public void updatePerson(){
 		Person person = new Person();
 		person.setName("小金");
-		person.setAge(19);
+		person.setAge(22);
 		person.setNationality("美国");
 		personDao.updatePerson(person);
 	}
