@@ -23,24 +23,35 @@ class DemoApplicationTests {
 	public void addPerson(){
 		Person person = new Person();
 		person.setAge(20);
-		person.setName("小金99");
+		person.setName("小m毛");
 		person.setNationality("美国");
 		personDao.addPerson(person);
 		System.out.println(personDao.getList());
 	}
 	@Test
+	public void addPerson2(){
+		Person person = new Person();
+		person.setAge(100);
+		person.setName("888");
+		person.setSex(1);
+		personDao.addPerson(person);
+		System.out.println(personDao.getList());
+	}
+
+	@Test
 	public void deletePerson(){
 		Person person = new Person();
-		person.setId(10);
+		person.setId(1);
 		personDao.deletePerson(person);
 	}
 
 	@Test
 	public void updatePerson(){
 		Person person = new Person();
-		person.setName("小金");
+		person.setId(2);
 		person.setAge(22);
-		person.setNationality("美国");
+		person.setName("Java soso");
+		person.setSex(66);
 		personDao.updatePerson(person);
 	}
 }

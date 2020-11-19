@@ -17,10 +17,10 @@ public interface PersonDao {
     //查询语句
     @Select("select * from person")
     List<Person> getList();
-    //插入一条数据
+    //增加数据
     @Insert("insert into person (" +
-            "id,name,age,nationality) values(" +
-            "#{id},#{name},#{age},#{nationality})")
+            "id,name,age,sex) values(" +
+            "#{id},#{name},#{age},#{sex})")
     void addPerson(Person person);
 
     //删除数据
@@ -28,7 +28,7 @@ public interface PersonDao {
     void deletePerson(Person person);
 
     //更新数据
-    @Update("update person set age = #{age},nationality=#{nationality} where name=#{name}")
+    @Update("update person set age = #{age},sex=#{sex},name=#{name} where id=#{id}")
     void updatePerson(Person person);
 }
 

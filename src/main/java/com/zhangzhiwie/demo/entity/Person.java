@@ -7,6 +7,7 @@ public class Person {
     private String name;
     private Integer age;
     private String nationality;
+    private Integer sex;
 
     public void setName(String name) {
         this.name = name;
@@ -38,6 +39,14 @@ public class Person {
 
     public Integer getId() {
         return id;
+    }
+
+    public void setSex(Integer sex) {
+        this.sex = sex;
+    }
+
+    public Integer getSex() {
+        return sex;
     }
 
     @Override
