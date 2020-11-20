@@ -17,7 +17,9 @@ class DemoApplicationTests {
 	PersonDao personDao;
 	@Test
 	public void getPersonList(){
-		System.out.println(personDao.getList());
+		Person person = new Person();
+		person.setName("小马");
+		System.out.println(personDao.getListByParams(person));
 	}
 	@Test
 	public void addPerson(){

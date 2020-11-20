@@ -18,10 +18,8 @@ public interface PersonDao {
 //    @Select("select * from person")
     List<Person> getList();
     //增加数据
-    @Insert("insert into person (" +
-            "id,name,age,sex) values(" +
-            "#{id},#{name},#{age},#{sex})")
     void addPerson(Person person);
+    List<Person> getListByParams(Person person);
 
     //删除数据
     @Delete("delete from person where id = #{id}")

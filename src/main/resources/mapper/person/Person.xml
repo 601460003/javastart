@@ -6,4 +6,34 @@
     <select id="getList" resultType="com.zhangzhiwie.demo.entity.Person">
         select * from person
     </select>
+    <select id="getListByParams" resultType="com.zhangzhiwie.demo.entity.Person">
+        select * from person
+        <where>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="age != null and age != ''">
+                and age = #{age}
+            </if>
+        </where>
+    </select>
+
+    <insert id="addPerson" >
+        insert into person (
+        <if test="name != null and name != ''">
+        name,
+        </if>
+        age,
+        sex
+        )
+        values(
+        <if test="name != null and name != ''">
+        #{name},
+        </if>
+        #{age},
+        #{sex}
+        )
+    </insert>
 </mapper>
+
+
