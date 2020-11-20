@@ -31,9 +31,9 @@ class DemoApplicationTests {
 	@Test
 	public void addPerson2(){
 		Person person = new Person();
-		person.setAge(100);
-		person.setName("888");
-		person.setSex(1);
+		person.setAge(22);
+		person.setName("CESS");
+		person.setSex(2);
 		personDao.addPerson(person);
 		System.out.println(personDao.getList());
 	}
@@ -48,10 +48,10 @@ class DemoApplicationTests {
 	@Test
 	public void updatePerson(){
 		Person person = new Person();
-		person.setId(2);
-		person.setAge(22);
-		person.setName("Java soso");
-		person.setSex(66);
+		person.setId(3);
+		person.setAge(33);
+		person.setName("ZHANGZHIWEI	");
+		person.setSex(2);
 		personDao.updatePerson(person);
 	}
 }
