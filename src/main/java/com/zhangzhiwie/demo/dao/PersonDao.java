@@ -15,7 +15,7 @@ import java.util.List;
 @Mapper  //声明这是一个mybatis访问数据库的接口
 public interface PersonDao {
     //查询语句
-    @Select("select * from person")
+//    @Select("select * from person")
     List<Person> getList();
     //增加数据
     @Insert("insert into person (" +
