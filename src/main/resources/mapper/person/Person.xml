@@ -2,33 +2,31 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.zhangzhiwie.demo.dao.PersonDao">
-
+    <!--    动态查询列表-->
     <select id="getList" resultType="com.zhangzhiwie.demo.entity.Person">
         select * from person
     </select>
+    <!--    动态查询列表-->
     <select id="getListByParams" resultType="com.zhangzhiwie.demo.entity.Person">
         select * from person
         <where>
             <if test="name != null and name != ''">
-                and name = #{name}
-            </if>
-            <if test="age != null and age != ''">
-                and age = #{age}
+                and name like concat('%', #{name}, '%')
             </if>
         </where>
     </select>
-
-    <insert id="addPerson" >
+    <!--    新增xml语句-->
+    <insert id="addPerson">
         insert into person (
         <if test="name != null and name != ''">
-        name,
+            name,
         </if>
         age,
         sex
         )
         values(
         <if test="name != null and name != ''">
-        #{name},
+            #{name},
         </if>
         #{age},
         #{sex}

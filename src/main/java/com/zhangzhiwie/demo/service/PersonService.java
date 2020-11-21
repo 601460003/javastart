@@ -1,5 +1,6 @@
 package com.zhangzhiwie.demo.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.zhangzhiwie.demo.entity.Person;
 
 import java.util.List;
@@ -9,14 +10,14 @@ public interface PersonService {
     List<Person> getList();
 
     //插入一条数据
-    void addPerson(Person person);
+    void addPerson(JSONObject person);
 
     //删除数据
-    void deletePerson(Person person);
+    void deletePerson(JSONObject id);
 
     //跟新数据
-    void updatePerson(Person person);
+    void updatePerson(JSONObject person);
 
     //根据条件查询数据库
-    List<Person> getListByParams(Person person);
+    List<Person> getListByParams(JSONObject person);
 }

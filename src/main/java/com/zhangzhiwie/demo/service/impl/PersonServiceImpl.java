@@ -1,5 +1,6 @@
 package com.zhangzhiwie.demo.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.zhangzhiwie.demo.dao.PersonDao;
 import com.zhangzhiwie.demo.entity.Person;
 import com.zhangzhiwie.demo.service.PersonService;
@@ -26,24 +27,24 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     @Transactional  //表示事务由spring管理的，我们需要收到begin transaction &commit
-    public void addPerson(Person person) {
+    public void addPerson(JSONObject person) {
         personDao.addPerson(person);
     }
 
     @Override
     @Transactional
-    public void deletePerson(Person person) {
-        personDao.deletePerson(person);
+    public void deletePerson(JSONObject id) {
+        personDao.deletePerson(id);
     }
 
     @Override
     @Transactional
-    public void updatePerson(Person person) {
+    public void updatePerson(JSONObject person) {
        personDao.updatePerson(person);
     }
 
     @Override
-    public List<Person> getListByParams(Person person){
+    public List<Person> getListByParams(JSONObject person){
         return personDao.getListByParams(person);
     }
 }
