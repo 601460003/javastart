@@ -34,6 +34,20 @@
         #{sex}
         )
     </insert>
+    <!--    修改xml语句-->
+    <update id="updatePerson">
+        update person
+        <set>
+            <if test="name != null and name !=''">name=#{name},</if>
+            <if test="age != null and age !=''">age=#{age},</if>
+            <if test="sex != null and sex !=''">sex=#{sex},</if>
+        </set>
+        where id=#{id}
+    </update>
+    <!--    删除xml语句-->
+    <delete id="deletePerson">
+        delete from person where id=#{id}
+    </delete>
 </mapper>
 
 

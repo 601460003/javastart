@@ -16,4 +16,7 @@ public interface PersonService {
 
     //跟新数据
     void updatePerson(Person person);
+
+    //根据条件查询数据库
+    List<Person> getListByParams(Person person);
 }

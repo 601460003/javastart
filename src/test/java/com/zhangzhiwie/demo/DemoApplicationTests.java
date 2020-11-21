@@ -18,7 +18,7 @@ class DemoApplicationTests {
 	@Test
 	public void getPersonList(){
 		Person person = new Person();
-		person.setName("小马");
+		person.setAge(28);
 		System.out.println(personDao.getListByParams(person));
 	}
 	@Test
@@ -26,9 +26,8 @@ class DemoApplicationTests {
 		Person person = new Person();
 		person.setAge(20);
 		person.setName("小m毛");
-		person.setNationality("美国");
+		person.setSex(1);
 		personDao.addPerson(person);
-		System.out.println(personDao.getList());
 	}
 	@Test
 	public void addPerson2(){
@@ -43,7 +42,7 @@ class DemoApplicationTests {
 	@Test
 	public void deletePerson(){
 		Person person = new Person();
-		person.setId(1);
+		person.setId(10);
 		personDao.deletePerson(person);
 	}
 

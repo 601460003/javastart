@@ -41,4 +41,9 @@ public class PersonServiceImpl implements PersonService {
     public void updatePerson(Person person) {
        personDao.updatePerson(person);
     }
+
+    @Override
+    public List<Person> getListByParams(Person person){
+        return personDao.getListByParams(person);
+    }
 }
