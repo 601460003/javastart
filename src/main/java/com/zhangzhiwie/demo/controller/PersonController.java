@@ -22,6 +22,12 @@ public class PersonController extends AbstractView{
 
     @PostMapping("add")
     public JSONObject add(@RequestBody JSONObject person) {
+        String[] params = new String[]{"name", "age", "sex"};
+        for (String k : params) {
+            if (!person.containsKey(k)) {
+                return getErrResult("缺少茶树" + k);
+            }
+        }
         personService.addPerson(person);
         return getResult(person);
     }
